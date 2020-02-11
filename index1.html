@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <title>阿萱點餐系統</title>
+  </head>
+  <body>
+    <div class="container">
+        <h1 class="text-center mt-5">阿萱點餐系統</h1>
+        <iframe target="returnWin" name="returnWin" style="display: none;" onload="this.onload=function(){window.location='ok.html'}"></iframe>
+
+        <form target="returnWin" role="form" 
+        action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeG8Lvc25OjwGm80SQHHEgvARsG8J_qnslKQNml-TQPw0DQcQ/formResponse" method="post" id="myForm" ></form>
+        <div class="row">  
+              <!--桌號-->              
+              <div class="col-sm-3">
+                <div class="form-group">
+                  <label>桌號<span class="text-danger">*</span></label>
+                  <select name="entry.858180961" id="858180961" value="" class="form-control" size="1">              
+                    <option value="">請選擇桌號</option>
+                    <option value="1號桌">1號桌</option>
+                    <option value="2號桌">2號桌</option>
+                    <option value="3號桌">3號桌</option>
+                    <option value="4號桌">4號桌</option>
+                    <option value="5號桌">5號桌</option>
+                    <option value="6號桌">6號桌</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <!--雞腿飯-90元-->              
+              <div class="col-sm-3">
+                <div class="form-group">
+                  <label>雞腿飯-90元<span class="text-danger">(請填數量)</span></label>
+                  <input type="number" class="form-control" name="entry.1248108106" id="1248108106" value="0" min="0">
+                </div>
+              </div>          
+              <!--雞排飯-80元-->              
+              <div class="col-sm-3">
+                <div class="form-group">
+                  <label>雞排飯-80元<span class="text-danger">(請填數量)</span></label>
+                  <input type="number" class="form-control" name="entry.223123937" id="223123937" value="0"  min="0">
+                </div>
+              </div>          
+              <!--排骨飯-70元-->              
+              <div class="col-sm-3">
+                <div class="form-group">
+                  <label>排骨飯-70元<span class="text-danger">(請填數量)</span></label>
+                  <input type="number" class="form-control" name="entry.1261540263" id="1261540263" value="0"  min="0">
+                </div>
+              </div>          
+              <!--招牌飯-60元-->              
+              <div class="col-sm-3">
+                <div class="form-group">
+                  <label>招牌飯-60元<span class="text-danger">(請填數量)</span></label>
+                  <input type="number" class="form-control" name="entry.2071538934" id="2071538934" value="0"  min="0">
+                </div>
+              </div> 
+    
+            </div> 
+            
+            <div class="row">
+              <div class="col-sm-12">  
+                <!-- 備註 -->
+                <div class="form-group">
+                  <label class="control-label">備註</label>
+                  <textarea class="form-control" rows="4"  name="entry.1715089225"  id="1715089225"></textarea>
+                </div>
+              </div>
+            </div>
+    
+            <div class="text-center pb-3">
+              <button type="submit" class="btn btn-primary">送出</button>
+            </div>
+          </form>
+      
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  </body>
+</html>
