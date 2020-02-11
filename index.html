@@ -9,10 +9,16 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 
     <title>阿萱點餐系統</title>
+   <style>
+   .error{
+        color:brown
+    }
+   
+   </style>
   </head>
   <body>
     <div class="container">
-        <h1 class="mt-5 text-center">育將點餐管理</h1>
+        <h1 class="mt-5 text-center">阿萱點餐管理</h1>
         
         <!-- 表單返回頁，記得在表單加「 target='returnWin' 」 -->
         <iframe name="returnWin" style="display: none;" onload="this.onload=function(){window.location='ok.html'}"></iframe>
@@ -24,7 +30,7 @@
                 <div class="col-sm-3">
                     <div class="form-group">
                     <label>桌號<span class="text-danger">*</span></label>
-                    <select name="entry.858180961" id="858180961" class="form-control" size="1">              
+                    <select name="entry.858180961" id="858180961" class="form-control"  size="1">              
                         <option value="">請選擇桌號</option>
                         <option value="1號桌">1號桌</option>
                         <option value="2號桌">2號桌</option>
@@ -91,6 +97,62 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  <!-- 表單驗證 -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.min.js"></script> 
+    <!-- 調用驗證方法 -->
+    <script>
+        $(function(){
+            $("#myForm").validate({
+                submitHandler: function(form) {
+                    form.submit();
+                },
+                rules: {
+                    'entry.858180961' : {//桌號
+                        required: true
+                    },
+                    'entry.1248108106' : {//雞腿飯
+                        digits:true ,
+                        min: 0
+                    },
+                    'entry.223123937' : {//雞排飯
+                        digits:true ,
+                        min: 0
+                    },
+                    'entry.1261540263' : {//排骨飯
+                        digits:true ,
+                        min: 0
+                    },
+                    'entry.2071538934' : {//招牌飯
+                        digits:true ,
+                        min: 0
+                    }
+                },
+                messages: {
+                    'entry.858180961' : {
+                        required: "請輸入桌號唷"
+                    },
+                    'entry.1248108106' : {
+                        digits:"請填正確數量" ,
+                        min: "請填正確數量"
+                    },
+                    'entry.223123937' : {//雞排飯
+                        digits:"請填正確數量" ,
+                        min: "請填正確數量"
+                    },
+                    'entry.1261540263' : {//排骨飯
+                        digits:"請填正確數量" ,
+                        min: "請填正確數量"
+                    },
+                    'entry.2071538934' : {//招牌飯
+                        digits:"請填正確數量" ,
+                        min: "請填正確數量"
+                    }
+
+                }
+            });
+
+        });
+    </script>
   
 <div id="shadowMeasureIt"></div><div id="divCoordMeasureIt"></div><div id="divRectangleMeasureIt"><div id="divRectangleBGMeasureIt"></div></div></body>
 </html>
